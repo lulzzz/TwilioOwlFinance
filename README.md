@@ -1,6 +1,8 @@
 # Twilio's Owl Finance Demo
 ### Learn how to build a production quality contact center
 
+**Degree of Difficulty (1-5): 4** This demo requires knowledge of the C# programming language, SOLID design principles, and the Microsoft .NET stack.
+
 Owl Finance is a fully functioning, fictional, banking contact center. Customers can send text messages, create traditional phone calls, in app voice calls, and send in app chat messages through the contact center. All channels of communication are intelligently routed to an agent with the appropriate skills to handle any request. Take a look at the following video for a high level explanation:
 
 [![Owl Finance Demo](https://github.com/jonedavis/OwlFinance/blob/master/images/youtube.png?raw=true)](https://youtu.be/pSVdTt7zJh8)
@@ -186,12 +188,23 @@ Both the mobile and web client are built with maximum reusability and dependency
    * [A Storage Account](https://portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Storage%2FStorageAccounts)
      * For Assets
 3. [Xamarin](https://www.xamarin.com)
-   * For iOS Mobile Client
+   * Build mobile apps in a single shared codebase in C# and .NET
+   * iOS Mobile Client.
 4. [Auth0](https://auth0.com/)
    * A [Client](https://manage.auth0.com/#/clients) with Auth0
 5. [DarkSky](https://darksky.net/dev/)
 6. [Zipcodeapi](https://www.zipcodeapi.com/)
 
+## Additional Resources
+- [Microsoft Azure Account](https://azure.microsoft.com/en-us/services/functions/)
+- Windows
+ - [Visual Studio for Windows](https://www.visualstudio.com/downloads/)
+ - [Azure .NET SDK](https://go.microsoft.com/fwlink/?LinkId=518003&clcid=0x409)
+- Mac
+ - [Xamarin Studio Community](https://www.xamarin.com/download)
+ - [Visual Studio Code](https://code.visualstudio.com/)
+ - [Azure Functions CLI](https://www.npmjs.com/package/azure-functions-cli)
+ 
 ## Contributors
 1. [Jon Davis](https://github.com/jonedavis)
    * Design, Development, and Xamarin Bindings
