@@ -5,7 +5,7 @@
 
 Owl Finance is a fully functioning, fictional, banking contact center. Customers can send text messages, create traditional phone calls, in app voice calls, and send in app chat messages through the contact center. All channels of communication are intelligently routed to an agent with the appropriate skills to handle any request. Take a look at the following video for a high level explanation:
 
-[![Owl Finance Demo](https://github.com/jonedavis/OwlFinance/blob/master/images/youtube.png?raw=true)](https://youtu.be/pSVdTt7zJh8)
+[![Owl Finance Demo](https://github.com/jonedavis/TwilioOwlFinance/blob/master/images/youtube.png?raw=true)](https://youtu.be/pSVdTt7zJh8)
 
 The following technologies and frameworks are used in Owl Finance:
 
@@ -128,7 +128,7 @@ Creating an agent with this endpoint and required attributes will create a linke
 ## High-level Technical Walk-through
 The application is built with a decoupled architecture in mind. Below is an architectural diagram that will jumpstart your understanding of how the different Lego pieces of the application fit together:
 
-![Owl Finance Architecture Diagram](https://github.com/jonedavis/OwlFinance/blob/master/images/owlfinance-arch.jpg?raw=true)
+![Owl Finance Architecture Diagram](https://github.com/jonedavis/TwilioOwlFinance/blob/master/images/owlfinance-arch.jpg?raw=true)
 
 All the interactions for both the mobile and web client go through a set of APIs. The APIs acts as central hub for allowing the necessary service integrations with third party providers such as Twilio, DarkSky API (previously known as Forecast), ZipcodeAPI, DocuSign, and Auth0. 
 
@@ -156,7 +156,7 @@ The agent can close the case, continue to conversate with the customer, or view 
 ## Code Architecture
 The entire app, mobile and web client, follow a pattern called “Onion Architecture”. Onion architecture is a software design pattern that “layers” the application using bunch of lego pieces.
 
-![Owl Finance Architecture Diagram](https://github.com/jonedavis/OwlFinance/blob/master/images/onion-arch.png?raw=true)
+![Owl Finance Architecture Diagram](https://github.com/jonedavis/TwilioOwlFinance/blob/master/images/onion-arch.png?raw=true)
 > http://jeffreypalermo.com/blog/the-onion-architecture-part-1/
 
 Both the mobile and web client are built with maximum reusability and dependency injection in mind. The core part of the architecture contains the domain objects which define the model and contracts of the entire application. There are a bunch of Domain Services, also called infrastructure to take care of HTTP request, database interaction, logging, messaging interaction, and Docusign Services. These layers are then wrapped using a façade called Application Services which is the single point of entry for the mobile and web projects. All of the application follows a strict “new is glue” principal and only feeds dependencies via constructors and dependency injection.
