@@ -1,0 +1,80 @@
+﻿<section>
+    <site-header></site-header>
+</section>
+<section>
+    <case-navigation></case-navigation>
+    <div class="container admin">
+        <div class="edit-user">
+            <div class="datagrid">
+                <div class="top-row">
+                    <h2>{{editMode ? 'Edit' : 'Create'}} {{type == 'agent' ? 'Agent' : 'Customer'}}</h2>
+                </div>
+                <form name="userForm" novalidate>
+                    <div class="row">
+                        <div class="col-md-3 form-group">
+                            <h4>First Name</h4>
+                            <input type="text" name="firstName" class="form-control" ng-model="user.firstName" required />
+                            <div ng-show="userForm.$submitted || userForm.firstName.$touched">
+                                <span class="red-link" ng-show="userForm.firstName.$error.required">First name is required</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <h4>Last Name</h4>
+                            <input type="text" name="lastName" class="form-control" ng-model="user.lastName" required />
+                            <div ng-show="userForm.$submitted || userForm.firstName.$touched">
+                                <span class="red-link" ng-show="userForm.lastName.$error.required">First name is required</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <h4>Identity ID</h4>
+                            <input type="text" name="identityId" class="form-control" ng-model="user.identityID" required />
+                            <div ng-show="userForm.$submitted || userForm.identityId.$touched">
+                                <span class="red-link" ng-show="userForm.identityId.$error.required">Identity ID is required</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-if="type === 'customer'">
+                        <div class="col-md-6 form-group">
+                            <h4>Phone Number</h4>
+                            <input type="text" name="phoneNumber" class="form-control" ng-model="user.phoneNumber" required />
+                            <div ng-show="userForm.$submitted || userForm.phoneNumber.$touched">
+                                <span class="red-link" ng-show="userForm.phoneNumber.$error.required">Phone number is required</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-if="type === 'agent'">
+                        <div class="col-md-6 form-group">
+                            <h4>Worker SID</h4>
+                            <input type="text" name="workerSid" class="form-control" ng-model="user.workerSid" required />
+                            <div ng-show="userForm.$submitted || userForm.workerSid.$touched">
+                                <span class="red-link" ng-show="userForm.workerSid.$error.required">Worker SID is required</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-if="type === 'agent'">
+                        <div class="col-md-6 form-group">
+                            <h4>Associated Customer</h4>
+                            <select class="form-control" 
+                                    ng-model="user.linkedUser" 
+                                    ng-options="customer as customer.name for customer in customers track by customer.id">
+                                <option value="">-- none --</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row actions">
+                        <div class="col-md-12 form-group">
+                            <button type="submit" class="btn btn-success" ng-click="save()">
+                                <i class="fa fa-check"></i>Save
+                            </button>
+                            <a id="cancel-button" class="btn" ng-href="#/admin/users">Cancel</a>
+                            <a id="delete-button" class="btn btn-danger" ng-click="delete()" ng-show="editMode">Delete</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</section>

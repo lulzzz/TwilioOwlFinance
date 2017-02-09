@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{FD5C70D6-1E1B-42D6-B42E-7116B3804570}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="apps/iOS/OwlFinance/OwlFinance/Managers/EventActions/RespondingToCallEvent.cs">
+    <Files>
+      <File FileName="apps/iOS/OwlFinance/OwlFinance/Views/ConversationsControls/ConversationsControls.cs" Line="68" Column="4" />
+      <File FileName="apps/iOS/OwlFinance/OwlFinance/Managers/EventActions/RespondingToCallEvent.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.OwlFinance PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.141A85A5-596A-434A-A043-4B69B4DA0500" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Catchpoint enabled="false" exceptionName="System.Exception" includeSubclasses="True" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <DisabledProjects>
+    <String>projects/Twilio.Infrastructure.IpMessaging/Twilio.Infrastructure.IpMessaging.csproj</String>
+  </DisabledProjects>
+</Properties>

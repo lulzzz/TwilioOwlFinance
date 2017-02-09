@@ -1,0 +1,37 @@
+<div class="user-info">
+    <img class="pull-left profile-img" ng-src="{{auth.profile.picture}}" alt="agent profile image" height="54">
+    <div class="pull-right">
+        <h3><a class="dropdown-button">Agent <img src="images/Arrow.png" width="14" height="10" alt="agent drop-down menu button"></a></h3>
+        <h4>{{auth.profile.name}}</h4>
+        <h5><a ng-click="toggleAvailability()">{{agent.isOffline ? 'Go Online' : 'Go Offline'}}</a></h5>
+    </div>
+    <div class="user-dropdown-wrapper">
+        <img class="dropdown-tail" src="images/dropdown-tail.png" width="17" height="9" alt="agent drop-down menu arrow">
+        <ul class="no-list">
+            <li>
+                <a class="top" ng-click="toggleAvailability()">
+                    <img class="dropdown-icon" ng-src="images/user-{{agent.isOffline ? 'red' : 'green'}}.png" width="16" height="16" alt="make user (un)available icon">
+                    <span>{{agent.isOffline ? 'Go Online' : 'Go Offline'}}</span>
+                </a>
+            </li>
+            <li>
+                <a ng-href="#/admin/users">
+                    <img class="dropdown-icon" src="images/skills-icon.png" width="16" height="16" alt="skills link icon">
+                    <span>User Management</span>
+                </a>
+            </li>
+            <li>
+                <a ng-click="reset()">
+                    <img class="dropdown-icon" src="images/settings-icon.png" width="16" height="16" alt="settings link icon">
+                    <span>Reset All</span>
+                </a>
+            </li>
+            <li>
+                <a class="bottom" ng-click="logoff()">
+                    <img class="dropdown-icon" src="images/logout-icon.png" width="16" height="16" alt="logoff link icon">
+                    <span>Log Off</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

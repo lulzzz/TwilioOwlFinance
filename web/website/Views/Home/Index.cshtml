@@ -1,0 +1,17 @@
+﻿@inherits Twilio.OwlFinance.Web.Mvc.OwlFinanceViewPage
+
+@{
+    ViewBag.InitModule = "owlfinance";
+}
+
+<div ng-view></div>
+
+@section Scripts{
+    <script>
+        var OWL_FINANCE_API_BASE_URL = '@Settings.Get("api:BaseUrl")';
+        var OWL_FINANCE_SIGNALR_SERVER_URL = '@Settings.Get("signalr:ServerUrl")';
+        var SITE_MODE = '@Settings.Get("sitemode")';
+    </script>
+    <script src="@Settings.Get("signalr:Hubs")" type="text/javascript"></script>
+    @Scripts.Render("~/bundles/app-js")
+}

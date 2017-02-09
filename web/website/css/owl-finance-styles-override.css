@@ -1,0 +1,342 @@
+﻿html, body {
+    background: #f9f9f9;
+}
+
+body {
+    height: auto;
+}
+
+a {
+    cursor: pointer;
+}
+
+header {
+    padding: 36px 0;
+}
+
+nav {
+    width: 760px;
+}
+
+collapsible header {
+    padding: 0;
+}
+
+.login-container {
+    width: 500px;
+}
+
+.contact-bar {
+    margin: 23px 0;
+}
+
+.open-case {
+    height: 337px;
+}
+
+    .open-case .content li {
+        display: block;
+    }
+
+    .open-case .content .inner-right div,
+    .open-case .content .inner-left div {
+        float: none;
+        margin-left: 40px;
+    }
+
+.account-lists {
+    margin-top: -30px;
+}
+
+.padding-left-0 {
+    padding-left: 0;
+}
+
+.padding-right-0 {
+    padding-right: 0;
+}
+
+.datagrid table thead th:first-child {
+    border-bottom: 1px solid #eee;
+}
+
+.datagrid table tr[ng-click] {
+    cursor: pointer;
+}
+
+.sub-nav a:hover {
+    text-decoration: none;
+}
+
+.sub-nav img.right {
+    float: none;
+    margin: 0 0 0 16px;
+}
+
+.sub-nav .close {
+    display: none;
+    float: none;
+    margin: 0 0 0 16px;
+    font-size: 10px;
+}
+
+.sub-nav .selected .close {
+    display: inline;
+}
+
+.phone {
+    display: none;
+}
+
+.sub-nav a.active .phone + .selector {
+    left: calc(50% - 15px - 37px);
+}
+
+.sub-nav a.active .phone {
+    display: inline;
+}
+
+.communications .content h3 {
+    margin-top: 70px;
+}
+
+.communications .content .connecting .call-buttons {
+    width: auto;
+    text-align: center;
+}
+
+.dropdown-button {
+    display: block;
+}
+
+.user-info h3 {
+    margin-top: 0;
+}
+
+.user-info h5 {
+    color: #fff;
+    margin: 8px 0 0 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.user-dropdown-wrapper {
+    margin-right: -19px;
+    /*transform: scale(0, 0);*/
+    visibility: hidden;
+    transition: visibility ease 250ms;
+    z-index: 1032;
+}
+
+    .user-dropdown-wrapper.show {
+        /*transform: scale(1, 1);*/
+        visibility: visible;
+    }
+
+.weather-section {
+    margin-top: 40px;
+}
+
+    .weather-section .weather-right {
+        margin-left: 11px;
+        width: auto;
+    }
+
+    .weather-section p.temp {
+        font-size: 40px;
+    }
+
+img.profile-img {
+    border-radius: 50%;
+}
+
+.communications .left {
+    text-transform: uppercase;
+}
+
+    .communications .left.green-background h2 {
+        margin: 18px 0;
+    }
+
+    .communications .left p {
+        text-transform: none;
+    }
+
+    .communications .left timer {
+        display: block;
+    }
+
+.communications .control-icon {
+    margin: 10px 5px 0 5px;
+}
+
+.communications .header-action-buttons {
+    right: 51px;
+}
+
+    .communications .header-action-buttons .border-white-btn {
+        margin: 0 0 0 10px;
+    }
+
+.in-app-messaging input:focus {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-offset: -1px;
+}
+
+.in-app-message a {
+    width: 173px;
+}
+
+.message-wrapper {
+    overflow-x: hidden;
+}
+
+.incoming-call .message-wrapper .message .message-text {
+    margin-bottom: 15px;
+}
+
+.incoming-call .message-wrapper .message .media-type-icon.smart-phone {
+    margin-top: 2.5px;
+    line-height: 23px;
+}
+
+.alert {
+    padding: 0;
+}
+
+.settings {
+    margin: 23px auto;
+}
+
+    .settings button {
+        margin: 0 23px 23px 0;
+        min-width: 132px;
+    }
+
+    .settings span {
+        display: inline-block;
+        padding: 7px 0;
+        vertical-align: text-bottom;
+    }
+
+        .settings span.error {
+            color: #b22a14;
+        }
+
+.notifications .control-wrapper {
+    margin-top: 30px;
+}
+
+    .notifications .control-wrapper a {
+        color: #838C8E;
+        text-transform: uppercase;
+    }
+
+        .notifications .control-wrapper a .control-icon {
+            margin-top: 0;
+        }
+
+    .notifications .control-wrapper.task {
+        width: auto;
+    }
+
+        .notifications .control-wrapper.task a:first-of-type {
+            margin-right: 180px;
+        }
+
+.notifications {
+    width: 360px;
+}
+
+    .notifications li {
+        border-color: #b22a14;
+    }
+
+    .notifications p {
+        font-size: 18px;
+        margin: 0 -15px;
+    }
+
+.docusign-container {
+    width: 35%;
+    margin: 2%;
+    max-width: none !important;
+}
+
+.docusign-confirm {
+    color: #000;
+    font-size: 30px;
+}
+
+.docusign-container .owl-logo {
+    width: 250px;
+}
+
+.owl-logo {
+    margin: 18px auto;
+    width: 52px;
+    padding-left: 70px;
+}
+
+
+.border-red-btn {
+    background: #b22a14;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    margin: -25px 10px 0 0;
+    padding: 6px 25px;
+}
+
+    .border-red-btn:hover {
+        color: #fff;
+    }
+
+.pull-right {
+    float: right !important;
+}
+
+.container.admin .datagrid {
+    position: relative;
+}
+
+.container.admin .admin-btn {
+    color: #001926;
+    border: 2px solid #001926;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    margin: 0 10px 0 0;
+    padding: 6px 25px;
+}
+
+    .container.admin .admin-btn:hover {
+        color: #fff;
+        background: #001926;
+    }
+
+.container.admin .header-action-buttons {
+    top: 4px;
+    right: 0;
+}
+
+.container.admin .edit-user {
+    background: #fff;
+    margin: 20px;
+}
+
+    .container.admin .edit-user h2 {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .container.admin .edit-user form {
+        margin: 20px;
+    }
+
+        .container.admin .edit-user form .actions {
+            margin-top: 10px;
+        }

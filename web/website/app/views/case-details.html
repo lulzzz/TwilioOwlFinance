@@ -1,0 +1,243 @@
+<section>
+    <site-header></site-header>
+</section>
+<section>
+    <case-navigation></case-navigation>
+    <div class="container">
+        <collapsible ng-init="expanded = true;">
+            <header class="contact-bar" ng-class="{'green-background': isCallMode}" ng-show="!expanded">
+                <a toggle>
+                    <h2>
+                        <img class="profile-img" ng-src="{{currentCase.accountOwnerImgUrl}}" alt="" width="31" height="29" /> Contact Al
+                    </h2>
+                    <div class="divider"></div>
+                    <img class="arrow" src="images/Arrow-down.png" alt="Arrow" />
+                </a>
+                <div class="clearfix"></div>
+            </header>
+            <section class="communications in-app-messaging incoming-call" ng-show="expanded">
+                <div class="col-sm-3 col-md-3 left" ng-class="{'green-background': isCallMode}">
+                    <h2>INTERACTING WITH</h2>
+                    <img class="profile-img" ng-src="{{currentCase.accountOwnerImgUrl}}" width="80" height="78" alt="{{currentCase.accountOwner}} profile image">
+                    <h2>{{currentCase.accountOwner}}</h2>
+                    <p>{{currentCase.summary}}</p>
+                    <div ng-show="isAskingForCall">Accept this call?</div>
+                    <div ng-show="!isAskingForCall">
+                        <timer ng-show="isCallMode" interval="1000" autostart="false">{{hhours}}:{{mminutes}}:{{sseconds}}</timer>
+
+                        <div style="display: flex; justify-content: center;" ng-show="!isCallMode">
+                            <div style="margin-right: 20px">
+                                <a ng-click="requestCall($event)"><img class="control-icon" src="images/Phone_Icon.png" alt="answer call button"></a>
+                                <br />
+                                in-app call
+                            </div>
+                            <div>
+                                <a ng-click="startPSTNCall($event)"><img class="control-icon" src="images/Rotary_Phone.png" alt="answer call button"></a>
+                                <br />
+                                phone call
+                            </div>                            
+                        </div>
+
+                        <a ng-show="isCallMode"><img class="control-icon" src="images/mute.png" alt="mute call button"></a>
+                        <a ng-show="isCallMode" ng-click="hangup($event)"><img class="control-icon" src="images/Hangup-Call.png" alt="hang up call button"></a>
+                        <a ng-show="isCallMode"><img class="control-icon" src="images/sound.png" alt="sound call button"></a>
+                    </div>
+
+                    <div ng-show="isAskingForCall">
+                        <a ng-click="acceptCall($event)"><img class="control-icon" src="images/Answer-Call.png" alt="answer call button"></a>
+                        <a ng-click="declineCall($event)"><img class="control-icon" src="images/Hangup-Call.png" alt="hang up call button"></a>
+                    </div>
+                </div>
+                <div class="col-sm-7 col-md-7 content">
+                    <a class="arrow" ng-class="{'green-background': isCallMode, 'navy-background': !isCallMode}" toggle>
+                        <img src="images/Arrow-up-white.png" width="11" height="8" alt="Arrow" />
+                    </a>
+                    <div class="header-action-buttons">
+                        <a class="btn pull-left border-white-btn" ng-click="sendDocuSignMessage()">Send Dispute Agreement</a>
+                        <a class="btn pull-left border-white-btn" ng-click="closeCase(currentCase.id)">Close Case</a>
+                    </div>
+                    <div class="message-wrapper">
+                        <ul class="no-list">
+                            <li ng-repeat="message in messageHistory">
+                                <div class="date">
+                                    <img src="images/message-bullet.png" width="10" height="10">
+                                    <span>{{message.sent | date:'dd MMM h:mm a'}}</span>
+                                </div>
+                                <div class="message">
+                                    <img class="media-type-icon smart-phone" src="images/smart-phone.png" alt="phone icon">
+                                    <img class="profile-img" ng-src="{{message.author.picture}}" width="23" height="23">
+                                    <div class="message-text">
+                                        <span ng-show="!message.isDocusign">
+                                            {{message.body}}
+                                        </span>
+                                        <span ng-show="message.isDocusign">
+                                            <a ng-click="openDocuSignDocument($event)">View Signature</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="in-app-message pull-left">
+                        <a>IN APP MESSAGE <img src="images/Arrow.png" width="12" height="8" alt="drop down menu icon" /></a>
+                    </div>
+                    <div class="type-your-message pull-left">
+                        <a class="message-dropdown" ng-click="sendMessage()">
+                            <!--<img src="images/message-plus.png" width="9" height="9" alt="add snippet button">-->
+                            Send
+                        </a>
+                        <input type="text" class="chat-input-text" name="message" placeholder="Type your message..."
+                               ng-model="message"
+                               on-enter-key="sendMessage()">
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </section>
+        </collapsible>
+        <div class="account-info">
+            <div class="spacer-20"></div>
+            <h2>Account Information</h2>
+            <hr>
+            <div class="col-sm-4 col-md-4 column">
+                <img class="icon" src="images/user-blue.png" width="21" height="22" alt="account info icon" />
+                <h3>Account Number</h3>
+                <p>•••• •••• •••• {{currentCase.accountNumber | limitTo: 4 : 15}}</p>
+                <h3>Account Owner</h3>
+                <p>
+                    {{currentCase.accountOwner}}
+                    <br><br>
+                    {{currentCase.accountOwnerAddress}}
+                    <br>
+                    {{currentCase.accountOwnerCityState}}
+                    {{currentCase.accountOwnerPostalCode}}
+                </p>
+            </div>
+            <div class="col-sm-4 col-md-4 column">
+                <img class="icon" src="images/Bank-52.png" width="21" height="22" alt="account type icon" />
+                <h3>Account Type</h3>
+                <p>{{currentCase.accountType}}</p>
+                <h3>Available Balance</h3>
+                <p>{{currentCase.availableBalance | currency}}</p>
+                <h3>Last Statement Date</h3>
+                <p>{{currentCase.lastStatementDate | date: 'mediumDate'}}</p>
+            </div>
+            <div class="col-sm-4 col-md-4 column">
+                <img class="icon" src="images/Trophy-52.png" width="21" height="22" alt="account status icon" />
+                <h3>Customer Value</h3>
+                <p>{{currentCase.customerValue}}</p>
+                <h3>Last Interaction</h3>
+                <p>{{currentCase.lastInteraction | date: 'mediumDate'}}</p>
+                <h3>Customer Since</h3>
+                <p>{{currentCase.customerSince | date: 'mediumDate'}}</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="open-case">
+            <div class="col-sm-3 col-md-3 left blue">
+                <img class="arrow" src="images/blue-right-arrow.png" lt="open case arrow">
+                <h2>Nature of Open Case</h2>
+                <img class="profile-img" ng-src="{{currentCase.accountOwnerImgUrl}}" width="80" height="78" alt="{{currentCase.accountOwner}} profile image">
+                <h2>{{currentCase.accountOwner}}</h2>
+                <p>{{currentCase.summary}}</p>
+                <div class="weather-section">
+                    <img class="sun-cloud" src="images/weather-sun-cloud.png" width="110" height="75" alt="weather icon">
+                    <div class="weather-right">
+                        <p class="temp">{{weather.currentTemp}}&deg;</p>
+                        <p class="feel-temp">
+                            REAL FEEL {{weather.apparentTemp}}&deg;<br>
+                            PRECIPITATION {{weather.precipitationPct}}&percnt;
+                        </p>
+                        <ul class="no-list">
+                            <li><img src="images/weather-arrow-up.png" alt="high temperature icon" /></li>
+                            <li>{{weather.highTemp}}&deg;</li>
+                            <li><img src="images/weather-arrow-down.png" alt="low temperature icon" /></li>
+                            <li>{{weather.lowTemp}}&deg;</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7 col-md-7 content white">
+                <div class="col-sm-5 col-md-5 inner-left">
+                    <h3>Open Cases</h3>
+                    <ul class="no-list">
+                        <li ng-repeat="case in openCases | orderBy: '-openedDate' | limitTo: 3">
+                            <img src="images/Circle-Mobile.png" width="30" height="30" alt="mobile phone icon" />
+                            <div>
+                                <p>{{case.summary}}</p>
+                                <span>{{case.openedDate | date: 'mediumDate'}}</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="see-all" ng-href="#/accounts/{{currentCase.accountId}}/cases">SEE PAST CASES</a>
+                </div>
+                <div class="col-sm-1 col-md-1 inner-middle"></div>
+                <div class="col-sm-5 col-md-5 inner-right">
+                    <h3>History</h3>
+                    <ul class="no-list">
+                        <li ng-repeat="_event in accountHistory | orderBy: '-date' | limitTo: 3">
+                            <img src="images/Circle-Phone.png" width="30" height="30" alt="phone call icon" />
+                            <div>
+                                <p>{{_event.summary}}</p>
+                                <span>{{_event.date | date: 'mediumDate'}}</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="see-all" ng-href="#/accounts/{{currentCase.accountId}}/history">SEE ALL</a>
+                </div>
+            </div>
+        </div>
+        <div class="account-lists">
+            <div class="col-sm-6 col-md-6 padding-left-0 padding-right-10">
+                <div class="datagrid">
+                    <div class="top-row">
+                        <h2>transactions</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>date</th>
+                                <th>description</th>
+                                <th>amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="transaction in transactions | orderBy: '-date' | limitTo: 3">
+                                <td>{{transaction.date | date: 'mediumDate'}}</td>
+                                <td>{{transaction.description}}</td>
+                                <td>{{transaction.amount | currency}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 padding-right-0 padding-left-10">
+                <div class="datagrid">
+                    <div class="top-row">
+                        <h2>statements</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>month</th>
+                                <th>start balance</th>
+                                <th>end balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="statement in statements | orderBy: '-date' | limitTo: 3">
+                                <td>{{statement.month}}</td>
+                                <td>{{statement.startBalance | currency}}</td>
+                                <td>{{statement.endBalance | currency}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <span id="local-media"></span>
+    <span id="remote-media"></span>
+</section>

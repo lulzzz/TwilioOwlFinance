@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{E741047D-1823-4A41-A5DA-DCACA5CDF2AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3CAA91BA-3F69-49CA-A662-F97593401116}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5FBF2D1A-628D-43F2-A118-AA813744B465}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twilio.OwlFinance.Domain", "projects\Twilio.OwlFinance.Domain\Twilio.OwlFinance.Domain.csproj", "{A54561E8-3B7A-4719-9293-20961E5C5C98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twilio.OwlFinance.Infrastructure.Logging", "projects\Twilio.OwlFinance.Infrastructure.Logging\Twilio.OwlFinance.Infrastructure.Logging.csproj", "{703663C3-0B8E-4CD3-8D09-E09F8CB4C783}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twilio.OwlFinance.Infrastructure.DataAccess", "projects\Twilio.OwlFinance.Infrastructure.DataAccess\Twilio.OwlFinance.Infrastructure.DataAccess.csproj", "{CB65C744-62A9-41DB-BF79-2EEBB7BC49E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twilio.OwlFinance.Services", "projects\Twilio.OwlFinance.Services\Twilio.OwlFinance.Services.csproj", "{F72D637B-A9D5-4D2A-80C0-1572B28B3A9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwilioOwlFinanceApi", "website\TwilioOwlFinanceApi\TwilioOwlFinanceApi.csproj", "{18B247FC-E215-43B1-926A-A3980C6DA657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twilio.OwlFinance.Infrastructure.Settings", "projects\Twilio.OwlFinance.Infrastructure.Settings\Twilio.OwlFinance.Infrastructure.Settings.csproj", "{B3FEAF47-498C-4240-962F-9047AA7C9F29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twilio.OwlFinance.Infrastructure.TaskRouter", "projects\Twilio.OwlFinance.Infrastructure.TaskRouter\Twilio.OwlFinance.Infrastructure.TaskRouter.csproj", "{8E359E57-C6CB-4F11-A438-A5060D519BF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twilio.OwlFinance.Infrastructure.IpMessaging", "projects\Twilio.OwlFinance.Infrastructure.IpMessaging\Twilio.OwlFinance.Infrastructure.IpMessaging.csproj", "{445E5251-FC6B-4152-ABDB-8E13A670F8C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twilio.OwlFinance.Infrastructure.Docusign", "projects\Twilio.OwlFinance.Infrastructure.Docusign\Twilio.OwlFinance.Infrastructure.Docusign.csproj", "{0BCA1884-0357-4E36-90CA-C2562B7BA8E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twilio.Infrastructure.Communications", "projects\Twilio.Infrastructure.Communications\Twilio.Infrastructure.Communications.csproj", "{2A975374-1D8F-42F3-96DD-93A5DB52B5E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A54561E8-3B7A-4719-9293-20961E5C5C98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A54561E8-3B7A-4719-9293-20961E5C5C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A54561E8-3B7A-4719-9293-20961E5C5C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A54561E8-3B7A-4719-9293-20961E5C5C98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{703663C3-0B8E-4CD3-8D09-E09F8CB4C783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{703663C3-0B8E-4CD3-8D09-E09F8CB4C783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{703663C3-0B8E-4CD3-8D09-E09F8CB4C783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{703663C3-0B8E-4CD3-8D09-E09F8CB4C783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB65C744-62A9-41DB-BF79-2EEBB7BC49E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB65C744-62A9-41DB-BF79-2EEBB7BC49E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB65C744-62A9-41DB-BF79-2EEBB7BC49E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB65C744-62A9-41DB-BF79-2EEBB7BC49E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72D637B-A9D5-4D2A-80C0-1572B28B3A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72D637B-A9D5-4D2A-80C0-1572B28B3A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72D637B-A9D5-4D2A-80C0-1572B28B3A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72D637B-A9D5-4D2A-80C0-1572B28B3A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B247FC-E215-43B1-926A-A3980C6DA657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B247FC-E215-43B1-926A-A3980C6DA657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B247FC-E215-43B1-926A-A3980C6DA657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B247FC-E215-43B1-926A-A3980C6DA657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3FEAF47-498C-4240-962F-9047AA7C9F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3FEAF47-498C-4240-962F-9047AA7C9F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3FEAF47-498C-4240-962F-9047AA7C9F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3FEAF47-498C-4240-962F-9047AA7C9F29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E359E57-C6CB-4F11-A438-A5060D519BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E359E57-C6CB-4F11-A438-A5060D519BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E359E57-C6CB-4F11-A438-A5060D519BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E359E57-C6CB-4F11-A438-A5060D519BF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{445E5251-FC6B-4152-ABDB-8E13A670F8C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{445E5251-FC6B-4152-ABDB-8E13A670F8C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{445E5251-FC6B-4152-ABDB-8E13A670F8C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{445E5251-FC6B-4152-ABDB-8E13A670F8C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BCA1884-0357-4E36-90CA-C2562B7BA8E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BCA1884-0357-4E36-90CA-C2562B7BA8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BCA1884-0357-4E36-90CA-C2562B7BA8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BCA1884-0357-4E36-90CA-C2562B7BA8E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A975374-1D8F-42F3-96DD-93A5DB52B5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A975374-1D8F-42F3-96DD-93A5DB52B5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A975374-1D8F-42F3-96DD-93A5DB52B5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A975374-1D8F-42F3-96DD-93A5DB52B5E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A54561E8-3B7A-4719-9293-20961E5C5C98} = {E741047D-1823-4A41-A5DA-DCACA5CDF2AA}
+		{703663C3-0B8E-4CD3-8D09-E09F8CB4C783} = {3CAA91BA-3F69-49CA-A662-F97593401116}
+		{CB65C744-62A9-41DB-BF79-2EEBB7BC49E4} = {3CAA91BA-3F69-49CA-A662-F97593401116}
+		{F72D637B-A9D5-4D2A-80C0-1572B28B3A9B} = {5FBF2D1A-628D-43F2-A118-AA813744B465}
+		{B3FEAF47-498C-4240-962F-9047AA7C9F29} = {3CAA91BA-3F69-49CA-A662-F97593401116}
+		{8E359E57-C6CB-4F11-A438-A5060D519BF5} = {3CAA91BA-3F69-49CA-A662-F97593401116}
+		{445E5251-FC6B-4152-ABDB-8E13A670F8C4} = {3CAA91BA-3F69-49CA-A662-F97593401116}
+		{0BCA1884-0357-4E36-90CA-C2562B7BA8E1} = {3CAA91BA-3F69-49CA-A662-F97593401116}
+		{2A975374-1D8F-42F3-96DD-93A5DB52B5E5} = {3CAA91BA-3F69-49CA-A662-F97593401116}
+	EndGlobalSection
+EndGlobal

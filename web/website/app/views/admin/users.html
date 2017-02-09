@@ -1,0 +1,35 @@
+﻿<section>
+    <site-header></site-header>
+</section>
+<section>
+    <case-navigation></case-navigation>
+    <div class="container admin">
+        <div class="datagrid">
+            <div class="top-row">
+                <h2>users</h2>
+                <div class="header-action-buttons">
+                    <a class="btn admin-btn" ng-href="#/admin/users/add/agent">Create Agent</a>
+                    <a class="btn admin-btn" ng-href="#/admin/users/add/customer">Create Customer</a>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>type</th>
+                        <th>linked with</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users" ng-click="onUserSelected(user)">
+                        <td>
+                            <a ng-href="#/admin/users/{{user.id}}">{{user.name}}</a>
+                        </td>
+                        <td>{{user.type}}</td>
+                        <td>{{(user.linkedUser || {}).name || '-- none --'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

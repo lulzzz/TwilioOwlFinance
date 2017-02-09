@@ -1,0 +1,9 @@
+if (SITE_MODE === 'dev') {
+    var AUTH0_CLIENT_ID = 'YOUR-AUTH0-CLIENT-ID-HERE';
+    var AUTH0_DOMAIN = 'YOUR-AUTH0-SUB-DOMAIN-HERE.auth0.com';
+}
+else {
+    var AUTH0_CLIENT_ID = 'YOUR-AUTH0-CLIENT-ID-HERE';
+    var AUTH0_DOMAIN = 'YOUR-AUTH0-SUB-DOMAIN-HERE.auth0.com';
+}
+var AUTH0_CALLBACK_URL = location.href;

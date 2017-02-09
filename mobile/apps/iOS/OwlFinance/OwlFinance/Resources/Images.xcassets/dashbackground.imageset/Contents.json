@@ -1,0 +1,62 @@
+{
+  "images": [
+    {
+      "scale": "1x",
+      "idiom": "universal"
+    },
+    {
+      "scale": "1x",
+      "idiom": "universal",
+      "filename": "wave-background.png"
+    },
+    {
+      "scale": "2x",
+      "idiom": "universal",
+      "filename": "wave-background@2x.png"
+    },
+    {
+      "scale": "3x",
+      "idiom": "universal",
+      "filename": "wave-background@3x.png"
+    },
+    {
+      "scale": "1x",
+      "idiom": "iphone"
+    },
+    {
+      "scale": "1x",
+      "idiom": "iphone"
+    },
+    {
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "scale": "2x",
+      "idiom": "iphone"
+    },
+    {
+      "scale": "3x",
+      "idiom": "iphone"
+    },
+    {
+      "scale": "1x",
+      "idiom": "ipad"
+    },
+    {
+      "scale": "1x",
+      "idiom": "ipad"
+    },
+    {
+      "scale": "2x",
+      "idiom": "ipad"
+    }
+  ],
+  "properties": {
+    "template-rendering-intent": ""
+  },
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  }
+}

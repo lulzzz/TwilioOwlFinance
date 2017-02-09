@@ -1,0 +1,29 @@
+<section>
+    <site-header></site-header>
+</section>
+<section>
+    <case-navigation></case-navigation>
+    <div class="container">
+        <div class="datagrid">
+            <div class="top-row">
+                <h2>account history</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>date</th>
+                        <th>summary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="_event in accountHistory | orderBy: '-date'">
+                        <td><img src="images/Circle-Phone.png" width="30" height="30" alt="mobile" /></td>
+                        <td>{{_event.date | date: 'mediumDate'}}</td>
+                        <td>{{_event.summary}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

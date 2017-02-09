@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEB1583A-BEE1-4509-A947-23C87F511049}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Twilio.OwlFinance.Domain</RootNamespace>
+    <AssemblyName>Twilio.Finance.Domain</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Interfaces\Http\ITransactionRepository.cs" />
+    <Compile Include="Interfaces\IConverter.cs" />
+    <Compile Include="Interfaces\ILogger.cs" />
+    <Compile Include="Interfaces\Services\ITransactionService.cs" />
+    <Compile Include="Model\ApiModel\CaseCreatedApiModel.cs" />
+    <Compile Include="Model\ApiModel\CaseExistenceApiModel.cs" />
+    <Compile Include="Model\ApiModel\ICanHaveError.cs" />
+    <Compile Include="Model\ApiModel\TransactionListApiModel.cs" />
+    <Compile Include="Model\Data\BaseDataModel.cs" />
+    <Compile Include="Model\Data\CaseCreatedModel.cs" />
+    <Compile Include="Model\Data\CaseExistenceModel.cs" />
+    <Compile Include="Model\Data\Transaction.cs" />
+    <Compile Include="Model\ServiceModel\BaseServiceModel.cs" />
+    <Compile Include="Model\ServiceModel\TransactionServiceModel.cs" />
+    <Compile Include="OwlFinanceUris.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\ISettings.cs" />
+    <Compile Include="Extensions\ByteExtensions.cs" />
+    <Compile Include="Model\Security\DecodedToken.cs" />
+    <Compile Include="Model\DateConstants.cs" />
+    <Compile Include="Model\ApiModel\ListResponseApiModel.cs" />
+    <Compile Include="Interfaces\Services\IAccountService.cs" />
+    <Compile Include="Interfaces\Http\IAccountRepository.cs" />
+    <Compile Include="Model\Data\Balance.cs" />
+    <Compile Include="Model\Data\Message.cs" />
+    <Compile Include="Model\ServiceModel\MessageServiceModel.cs" />
+    <Compile Include="Interfaces\Services\IMessageService.cs" />
+    <Compile Include="Interfaces\Http\IMessageRepository.cs" />
+    <Compile Include="Model\ServiceModel\MenuServiceModel.cs" />
+    <Compile Include="Model\Data\TwilioTokenModel.cs" />
+    <Compile Include="Model\Data\AccountInformation.cs" />
+    <Compile Include="Model\ApiModel\AccountInformationApiModel.cs" />
+    <Compile Include="Model\ApiModel\AccountBalanceApiModel.cs" />
+    <Compile Include="Model\ApiModel\TransactionDetailApiModel.cs" />
+    <Compile Include="Model\ApiModel\MessagesApiModel.cs" />
+    <Compile Include="Interfaces\Services\ISignalRService.cs" />
+    <Compile Include="Model\MessageReceived.cs" />
+    <Compile Include="Model\SignalREventArgs.cs" />
+    <Compile Include="Model\PCLTimer.cs" />
+    <Compile Include="Model\Security\IdentityToken.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

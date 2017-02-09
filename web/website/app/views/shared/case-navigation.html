@@ -1,0 +1,22 @@
+<div class="sub-nav-wrapper">
+    <div class="container">
+        <div class="sub-nav">
+            <ul>
+                <li>
+                    <a ng-class="{selected: $root.tab.isHome}" href="#/">
+                        <img class="selector" src="images/dark-marker.png" alt="Marker" />
+                        <img class="left" src="images/Home_Icon.png" alt="" /> home
+                    </a>
+                </li>
+                <li ng-repeat="case in cases">
+                    <a class="inactive" ng-class="{selected: id == case.id}" ng-href="#/cases/{{case.id}}">
+                        <img class="left profile-img" ng-src="{{case.imageUrl}}" alt="profile" height="26" width="27" /> {{case.owner}}
+                        <img class="right phone" src="images/Phone.png" alt="" />
+                        <img class="selector" src="images/dark-marker.png" alt="Marker" ng-show="id == case.id" />
+                    </a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

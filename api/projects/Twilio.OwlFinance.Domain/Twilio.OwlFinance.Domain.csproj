@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A54561E8-3B7A-4719-9293-20961E5C5C98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Twilio.OwlFinance.Domain</RootNamespace>
+    <AssemblyName>Twilio.OwlFinance.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\DynamicExtensions.cs" />
+    <Compile Include="Interfaces\IpMessaging\IIpMessagingManager.cs" />
+    <Compile Include="Interfaces\Services\IDocuSignService.cs" />
+    <Compile Include="Interfaces\Services\IAdminService.cs" />
+    <Compile Include="Interfaces\Services\ISettingsService.cs" />
+    <Compile Include="Interfaces\Services\IWeatherService.cs" />
+    <Compile Include="Interfaces\Settings\IAppSettingsProvider.cs" />
+    <Compile Include="Interfaces\Services\ISkillService.cs" />
+    <Compile Include="Interfaces\Services\IMerchantService.cs" />
+    <Compile Include="Interfaces\Services\ICaseService.cs" />
+    <Compile Include="Interfaces\Services\IAccountService.cs" />
+    <Compile Include="Interfaces\Services\IAgentService.cs" />
+    <Compile Include="Interfaces\Settings\ITwilioApiSettingsProvider.cs" />
+    <Compile Include="Interfaces\TaskRouter\ITaskRouterManager.cs" />
+    <Compile Include="Model\Api\AccountInfoModel.cs" />
+    <Compile Include="Model\Api\Admin\CreateAgentResponse.cs" />
+    <Compile Include="Model\Api\Admin\CreateAgentRequest.cs" />
+    <Compile Include="Model\Api\Admin\SimpleUserModel.cs" />
+    <Compile Include="Model\Api\Admin\UserModel.cs" />
+    <Compile Include="Model\Api\Admin\UserType.cs" />
+    <Compile Include="Model\Api\AgentTaskModel.cs" />
+    <Compile Include="Model\Api\AgentModel.cs" />
+    <Compile Include="Model\Api\BalanceModel.cs" />
+    <Compile Include="Model\Api\CaseClosedModel.cs" />
+    <Compile Include="Model\Api\CaseExistenceModel.cs" />
+    <Compile Include="Model\Api\CaseMessageModel.cs" />
+    <Compile Include="Model\Api\CasePostModel.cs" />
+    <Compile Include="Model\Api\CaseCreatedModel.cs" />
+    <Compile Include="Model\Api\CaseModelLite.cs" />
+    <Compile Include="Model\Api\CloseCaseModel.cs" />
+    <Compile Include="Model\Api\CustomerModel.cs" />
+    <Compile Include="Model\Api\DocumentSignModel.cs" />
+    <Compile Include="Model\Api\DocuSignResponseModel.cs" />
+    <Compile Include="Model\Api\MerchantModel.cs" />
+    <Compile Include="Model\Api\CaseModel.cs" />
+    <Compile Include="Model\Api\AccountModel.cs" />
+    <Compile Include="Model\Api\NotificationModel.cs" />
+    <Compile Include="Model\Api\SkillModel.cs" />
+    <Compile Include="Model\Api\AccountEventModel.cs" />
+    <Compile Include="Model\Api\StatementModel.cs" />
+    <Compile Include="Model\Api\UserModel.cs" />
+    <Compile Include="Model\Api\WeatherModel.cs" />
+    <Compile Include="Model\Data\Address.cs" />
+    <Compile Include="Model\Data\CaseType.cs" />
+    <Compile Include="Model\Data\CustomerValueLevel.cs" />
+    <Compile Include="Model\Data\DocuSignLog.cs" />
+    <Compile Include="Model\Data\Event.cs" />
+    <Compile Include="Model\Data\IHaveIdentity.cs" />
+    <Compile Include="Interfaces\ILogger.cs" />
+    <Compile Include="Interfaces\Repositories\ICanQueryDb.cs" />
+    <Compile Include="Interfaces\Repositories\IRepository.cs" />
+    <Compile Include="Interfaces\Services\IPingService.cs" />
+    <Compile Include="Interfaces\Services\ITransactionService.cs" />
+    <Compile Include="Model\Data\Statement.cs" />
+    <Compile Include="Model\Documents\DocuSignAuthHeader.cs" />
+    <Compile Include="Model\EnumerableApiResponse.cs" />
+    <Compile Include="Model\EmptyApiResponse.cs" />
+    <Compile Include="Model\ErrorApiResponse.cs" />
+    <Compile Include="Model\Api\TransactionModel.cs" />
+    <Compile Include="Model\ApiResponse.cs" />
+    <Compile Include="Model\Data\CaseStatus.cs" />
+    <Compile Include="Model\Data\Case.cs" />
+    <Compile Include="Model\Data\PaymentCard.cs" />
+    <Compile Include="Model\Data\CardType.cs" />
+    <Compile Include="Model\Data\Merchant.cs" />
+    <Compile Include="Model\Data\Debit.cs" />
+    <Compile Include="Model\Data\BalanceTransfer.cs" />
+    <Compile Include="Model\Data\AtmWithdrawal.cs" />
+    <Compile Include="Model\Data\Deposit.cs" />
+    <Compile Include="Model\Data\Transaction.cs" />
+    <Compile Include="Model\Data\AccountType.cs" />
+    <Compile Include="Model\Data\Agent.cs" />
+    <Compile Include="Model\Data\Account.cs" />
+    <Compile Include="Model\Data\User.cs" />
+    <Compile Include="Model\Data\ICanBeActive.cs" />
+    <Compile Include="Model\Data\ICanBeModified.cs" />
+    <Compile Include="Model\Data\ICanBeDeleted.cs" />
+    <Compile Include="Model\Data\IEntity.cs" />
+    <Compile Include="Model\Data\Customer.cs" />
+    <Compile Include="Model\ErrorCodes.cs" />
+    <Compile Include="Model\IGenericResponse.cs" />
+    <Compile Include="Model\Api\PingModel.cs" />
+    <Compile Include="Model\ICanHaveError.cs" />
+    <Compile Include="Model\TaskRouter\Skill.cs" />
+    <Compile Include="Model\TaskRouter\ReservationPostModel.cs" />
+    <Compile Include="Model\TaskRouter\TaskPostModel.cs" />
+    <Compile Include="Model\TwilioVoiceToken.cs" />
+    <Compile Include="Model\TwilioToken.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

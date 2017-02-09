@@ -1,0 +1,29 @@
+<section>
+    <site-header></site-header>
+</section>
+<section>
+    <case-navigation></case-navigation>
+    <div class="container">
+        <div class="datagrid">
+            <div class="top-row">
+                <h2>past cases</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>date</th>
+                        <th>description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="case in accountCases | orderBy: '-openedDate'">
+                        <td><img src="images/Circle-Mobile.png" width="30" height="30" alt="mobile" /></td>
+                        <td>{{case.openedDate | date: 'mediumDate'}}</td>
+                        <td>{{case.description}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

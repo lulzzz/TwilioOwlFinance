@@ -1,0 +1,22 @@
+<svg width="52px" height="51px" viewBox="694 40 52 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+	<polygon id="path-1" points="0 50.9396135 51.9060241 50.9396135 51.9060241 0 0 0"></polygon>
+  </defs>
+  <g id="Logo" stroke="none" stroke-width="1" fill="#001926" fill-rule="evenodd" transform="translate(694.000000, 40.000000)">
+	<path d="M50.6529494,25.4698067 C50.6529494,38.8440092 39.5944916,49.6882362 25.9529494,49.6882362 C12.3114072,49.6882362 1.2529494,38.8440092 1.2529494,25.4698067 C1.2529494,12.0927883 12.3114072,1.2513773 25.9529494,1.2513773 C39.5944916,1.2513773 50.6529494,12.0927883 50.6529494,25.4698067 L50.6529494,25.4698067 Z" id="Stroke-1" stroke="#FFFFFF" stroke-width="2"></path>
+	<polygon id="Fill-3" fill="#FFFFFF" points="12.1033446 22.0316245 25.9528867 13.1307166 39.8018024 22.0316245"></polygon>
+	<polygon id="Fill-5" fill="#F6ECA3" points="18.4465301 19.993627 25.953012 15.1689644 33.459494 19.993627"></polygon>
+	<mask id="mask-2" fill="white">
+	  <use xlink:href="#path-1"></use>
+	</mask>
+	<g id="Clip-8"></g>
+	<polygon id="Fill-7" fill="#FFFFFF" mask="url(#mask-2)" points="13.3182651 36.2437914 38.5868193 36.2437914 38.5868193 33.2663926 13.3182651 33.2663926"></polygon>
+	<polygon id="Fill-9" fill="#D2EEFB" mask="url(#mask-2)" points="16.3543133 31.5148712 20.1935422 31.5148712 20.1935422 21.9734908 16.3543133 21.9734908"></polygon>
+	<polygon id="Fill-10" fill="#FFFFFF" mask="url(#mask-2)" points="16.3543133 31.5148712 18.274241 31.5148712 18.274241 21.9734908 16.3543133 21.9734908"></polygon>
+	<polygon id="Fill-11" fill="#D2EEFB" mask="url(#mask-2)" points="24.0327711 31.5148712 27.8723133 31.5148712 27.8723133 21.9734908 24.0327711 21.9734908"></polygon>
+	<polygon id="Fill-12" fill="#D2EEFB" mask="url(#mask-2)" points="31.7118554 31.5148712 35.5510843 31.5148712 35.5510843 21.9734908 31.7118554 21.9734908"></polygon>
+	<polygon id="Fill-13" fill="#FFFFFF" mask="url(#mask-2)" points="24.0330843 31.5148712 25.953012 31.5148712 25.953012 21.9734908 24.0330843 21.9734908"></polygon>
+	<polygon id="Fill-14" fill="#FFFFFF" mask="url(#mask-2)" points="31.7118554 31.5148712 33.6317831 31.5148712 33.6317831 21.9734908 31.7118554 21.9734908"></polygon>
+	<polygon id="Fill-15" fill="#F6ECA3" mask="url(#mask-2)" points="15.1489157 33.2663926 36.7564819 33.2663926 36.7564819 31.3405951 15.1489157 31.3405951"></polygon>
+  </g>
+</svg>

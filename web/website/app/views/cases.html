@@ -1,0 +1,49 @@
+<section>
+    <site-header></site-header>
+</section>
+<section>
+    <case-navigation></case-navigation>
+    <div class="container">
+        <div class="datagrid">
+            <div class="top-row">
+                <h2>open cases</h2>
+                <input type="button" class="btn border-red-btn pull-right" value="Trigger suspicious activity" ng-click="sendSms();">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>date opened</th>
+                        <th>account owner</th>
+                        <th>case description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="case in cases | filter: { closedDate: '!' }" ng-click="onCaseSelected(case)">
+                        <td>{{case.openedDate | date: 'mediumDate'}}</td>
+                        <td>{{case.accountOwner}}</td>
+                        <td>{{case.summary}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="bottom-row" ng-click="onShowHistory()">
+                <a href="#/"><h2>History</h2></a>
+            </div>
+            <table ng-show="history">
+                <thead>
+                    <tr>
+                        <th>date closed</th>
+                        <th>account owner</th>
+                        <th>case description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="case in cases | filter: { closedDate: '' }">
+                        <td>{{case.closedDate | date: 'mediumDate'}}</td>
+                        <td>{{case.accountOwner}}</td>
+                        <td>{{case.summary}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+﻿
+<ul class="no-list notifications">
+    <li ng-repeat="message in messages">
+        <div class="col-sm-3 col-md-3" ng-if="message.imageUrl">
+            <img class="profile-img" ng-src="{{message.imageUrl}}" width="50" height="50" alt="notification image">
+        </div>
+        <div class="col-sm-9 col-md-9"><p>{{message.content}}</p></div>
+        <div class="clearfix"></div>
+        <div class="control-wrapper message" ng-if="message.type === types.MESSAGE">
+            <a href ng-click="close(message)">Ok</a>
+        </div>
+        <div class="control-wrapper call" ng-if="message.type === types.CALL">
+            <a href ng-click="accept(message)"><img class="control-icon" src="images/Answer-Call.png" alt=""></a>
+            <a href ng-click="decline(message)"><img class="control-icon last" src="images/Hangup-Call.png" alt=""></a>
+        </div>
+        <div class="control-wrapper task" ng-if="message.type === types.TASK">
+            <a href ng-click="accept(message)">Accept</a>
+            <a href ng-click="decline(message)">Decline</a>
+        </div>
+    </li>
+</ul>
