@@ -1,6 +1,5 @@
-﻿using OwlFinance.ViewControllers;
 using UIKit;
-using Xamarin.SWRevealViewController;
+using OwlFinance.ViewControllers;
 
 namespace OwlFinance.Managers.EventActions
 {
@@ -15,22 +14,14 @@ namespace OwlFinance.Managers.EventActions
 				{
 					vc.DocuSignUrl = data;
 					var nav = new UINavigationController(vc);
-					var reveal = AppDelegate.Window.RootViewController as SWRevealViewController;
+					var topController = AppDelegate.Window.RootViewController;
 
-					// Race condition
-					if (reveal == null) return;
-					
-					var rootNav = reveal.FrontViewController as UINavigationController;
-					if (rootNav.VisibleViewController is MessageDetailViewController)
+					while (topController.PresentedViewController != null)
 					{
-						rootNav
-							.PresentedViewController
-						   	.PresentViewController(nav, true, null);
+						topController = topController.PresentedViewController;
 					}
-					else 
-					{
-						reveal.PresentViewController(nav, true, null);
-					}
+
+					topController.PresentViewController(nav, true, null);
 				}
 			});
 		}
