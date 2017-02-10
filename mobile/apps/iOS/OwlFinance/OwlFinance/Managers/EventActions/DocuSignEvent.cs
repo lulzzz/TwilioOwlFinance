@@ -16,6 +16,10 @@ namespace OwlFinance.Managers.EventActions
 					vc.DocuSignUrl = data;
 					var nav = new UINavigationController(vc);
 					var reveal = AppDelegate.Window.RootViewController as SWRevealViewController;
+
+					// Race condition
+					if (reveal == null) return;
+					
 					var rootNav = reveal.FrontViewController as UINavigationController;
 					if (rootNav.VisibleViewController is MessageDetailViewController)
 					{
